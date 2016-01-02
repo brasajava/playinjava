@@ -2,4 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Display"/>
 <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Shell"/>
+<fullyQualifiedTypeName name="org.hibernate.criterion.CriteriaQuery"/>
+<fullyQualifiedTypeName name="javax.persistence.criteria.CriteriaQuery"/>
 </qualifiedTypeNameHistroy>
