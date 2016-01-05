@@ -1,6 +1,6 @@
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
-//this
+
 public class HelloWorldSWT {
 	public static void main(String[] args) {
 		Display display = new Display();

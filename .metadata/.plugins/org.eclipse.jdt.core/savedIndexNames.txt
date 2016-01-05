@@ -34,7 +34,6 @@ INDEX VERSION 1.127+C:\Users\Ricardo\Documents\GitHub\playinjava\.metadata\.plug
 2142348700.index
 3577801.index
 3836088759.index
-3800205899.index
 497407954.index
 4247270281.index
 757521372.index
