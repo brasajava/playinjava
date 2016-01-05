@@ -4,4 +4,6 @@
 <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Shell"/>
 <fullyQualifiedTypeName name="org.hibernate.criterion.CriteriaQuery"/>
 <fullyQualifiedTypeName name="javax.persistence.criteria.CriteriaQuery"/>
+<fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.EnableAutoConfiguration"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 </qualifiedTypeNameHistroy>
