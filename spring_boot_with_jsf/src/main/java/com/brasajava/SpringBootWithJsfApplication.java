@@ -15,7 +15,6 @@ public class SpringBootWithJsfApplication extends SpringBootServletInitializer{
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootWithJsfApplication.class, args);
-		System.out.println("Ricardo");
 	}
 	
 	@Override

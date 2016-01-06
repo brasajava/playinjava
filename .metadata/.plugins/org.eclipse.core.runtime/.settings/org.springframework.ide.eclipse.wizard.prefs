@@ -1,14 +1,15 @@
 eclipse.preferences.version=1
 org.springframework.ide.eclipse.wizard.gettingstarted.boot.PopularityTracker.data-jpa=2
 org.springframework.ide.eclipse.wizard.gettingstarted.boot.PopularityTracker.mysql=2
+org.springframework.ide.eclipse.wizard.gettingstarted.boot.PopularityTracker.thymeleaf=1
 org.springframework.ide.eclipse.wizard.gettingstarted.boot.PopularityTracker.web=3
-org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.artifactId=springboot
+org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.artifactId=springbootthymeleaf
 org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.bootVersion=1.3.1.RELEASE
 org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.description=Demo project for Spring Boot
 org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.groupId=com.brasajava
 org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.javaVersion=1.8
 org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.language=java
-org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.name=spring_boot
+org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.name=spring_boot_thymeleaf
 org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.packageName=com.brasajava
 org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.packaging=jar
 org.springframework.ide.eclipse.wizard.gettingstarted.boot.PreferredSelections.type=MAVEN

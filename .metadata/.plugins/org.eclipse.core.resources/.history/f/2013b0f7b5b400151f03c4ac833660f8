@@ -1,0 +1,5 @@
+package com.brasajava.controller;
+
+public class PublicController {
+
+}
