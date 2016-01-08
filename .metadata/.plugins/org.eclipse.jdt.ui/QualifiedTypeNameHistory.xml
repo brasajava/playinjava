@@ -5,5 +5,12 @@
 <fullyQualifiedTypeName name="org.hibernate.criterion.CriteriaQuery"/>
 <fullyQualifiedTypeName name="javax.persistence.criteria.CriteriaQuery"/>
 <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.EnableAutoConfiguration"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.brasajava.Cuenta"/>
+<fullyQualifiedTypeName name="org.springframework.web.context.request.RequestAttributes"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
 </qualifiedTypeNameHistroy>
