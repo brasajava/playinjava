@@ -1,0 +1,10 @@
+package com.oakdalesoft.bootfaces.persistence;
+
+import com.oakdalesoft.bootfaces.domain.Book;
+
+/**
+ * Created by Alex on 07/03/2015.
+ */
+
+public interface BookRepository{//extends JpaRepository<Book, Long> {
+}

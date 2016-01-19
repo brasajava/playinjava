@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="spring_boot"/>
-<aop-project name="spring_boot_with_jsf"/>
+<aop-project name="spring-jsf-tutorial"/>
+<aop-project name="spring-jsf"/>
 <aop-project name="spring_boot_thymeleaf"/>
 </aop-reference-model>

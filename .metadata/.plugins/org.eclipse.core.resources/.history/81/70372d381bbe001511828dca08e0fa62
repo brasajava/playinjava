@@ -1,0 +1,49 @@
+package com.brasajava;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.faces.webapp.FacesServlet;
+import javax.servlet.Servlet;
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
+
+import org.springframework.boot.context.embedded.ServletRegistrationBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.sun.faces.config.FacesInitializer;
+
+@Configuration
+public class JSFConfiguration {
+	
+	@Bean
+	public ServletRegistrationBean servletRegistrationBean(){
+		FacesServlet servlet = new FacesServlet();
+		List<String> list = new ArrayList<String>();
+		list.add("*.jsf");
+		ServletRegistrationBean servletRegistrationBean = new JSFServletRegistrationBean(servlet,list);
+		//ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(servlet,"*.jsf");
+		return servletRegistrationBean;
+		
+	}
+	public class JSFServletRegistrationBean extends ServletRegistrationBean{
+		public JSFServletRegistrationBean(){
+			super();
+		}
+		public JSFServletRegistrationBean(Servlet servlet, List<String> list){
+			this.setServlet(servlet);
+			this.setUrlMappings(list);
+		}
+		@Override
+		public void onStartup(ServletContext servletContext)throws ServletException{
+			FacesInitializer facesInitializer = new FacesInitializer();
+			Set<Class<?>> clazz = new HashSet<Class<?>>();
+			clazz.add(JSFConfiguration.class);
+			facesInitializer.onStartup(clazz, servletContext);
+		}
+	}
+
+}

@@ -1,0 +1,11 @@
+package com.brasajava.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class PublicController {
+
+	public String creator(){
+		return "Ricardo Maximino Gonçalves de Moraes";
+	}
+}

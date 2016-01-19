@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;FacesRewriteConfigurationProvider.java&apos; to &apos;spring-jsf/src/main/java/com.brasajava&apos;&#x0D;&#x0A;- Original project: &apos;boot-faces&apos;&#x0D;&#x0A;- Destination element: &apos;spring-jsf/src/main/java/com.brasajava&apos;&#x0D;&#x0A;- Original element: &apos;com.oakdalesoft.bootfaces.FacesRewriteConfigurationProvider.java&apos;" description="Copy compilation unit" destination="=spring-jsf/src\/main\/java&lt;com.brasajava" element1="/src\/main\/java&lt;com.oakdalesoft.bootfaces{FacesRewriteConfigurationProvider.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1453234682182" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,117 @@
+<html>
+<head>
+<script type="text/javascript">
+	function atributos()
+	{
+		var x=document.getElementsByTagName("form")[0];
+		alert(x.className);
+	}
+
+</script>
+	<style type="text/css" id="paypal-button">
+	.paypal-button { white-space: nowrap; }.paypal-button button { white-space: nowrap; overflow: hidden; border-radius: 13px; font-family: "Arial", bold, italic; font-weight: bold; font-style: italic; border: 1px solid #ffa823; color: #0E3168; background: #ffa823; position: relative; text-shadow: 0 1px 0 rgba(255,255,255,.5); cursor: pointer; z-index: 0; }.paypal-button button:before { content: " "; position: absolute; width: 100%; height: 100%; border-radius: 11px; top: 0; left: 0; background: #ffa823; background: -webkit-linear-gradient(top, #FFAA00 0%,#FFAA00 80%,#FFF8FC 100%); background: -moz-linear-gradient(top, #FFAA00 0%,#FFAA00 80%,#FFF8FC 100%); background: -ms-linear-gradient(top, #FFAA00 0%,#FFAA00 80%,#FFF8FC 100%); background: linear-gradient(top, #FFAA00 0%,#FFAA00 80%,#FFF8FC 100%); z-index: -2; }.paypal-button button:after { content: " "; position: absolute; width: 98%; height: 60%; border-radius: 40px 40px 38px 38px; top: 0; left: 0; background: -webkit-linear-gradient(top, #fefefe 0%, #fed994 100%); background: -moz-linear-gradient(top, #fefefe 0%, #fed994 100%); background: -ms-linear-gradient(top, #fefefe 0%, #fed994 100%); background: linear-gradient(top, #fefefe 0%, #fed994 100%); z-index: -1; -webkit-transform: translateX(1%);-moz-transform: translateX(1%); -ms-transform: translateX(1%); transform: translateX(1%); }.paypal-button button.small { padding: 3px 15px; font-size: 12px; }.paypal-button button.large { padding: 4px 19px; font-size: 14px; }</style>
+</head>
+<body>
+<!--<script src="paypal-button.min.js?merchant=DBNGQLY8GE26Y"
+    data-button="buynow"
+    data-name="Meu Produto"
+    data-amount="1.00"
+></script>-->
+<!--<script 
+	data-env="sandbox"
+    data-callback="" 
+    data-tax="0.00" 
+    data-shipping="0.00" 
+    data-currency="BRL" 
+    data-amount="1.50" 
+    data-quantity="2" 
+    data-name="camisa" 
+    data-button="buynow" src="paypal-button.min.js?merchant=vendedor@ig.com.br" onclick="atributos();"
+></script>-->
+
+<!--pegar o token de retorno e colocar na url a seguir https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=tokenValue-->
+<!--<form method="post" action="https://api-3t.sandbox.paypal.com/nvp" target="_top">
+		<input type="hidden" name="USER" value="r-xsilva-facilitator_api1.ig.com.br">
+		<input type="hidden" name="PWD" value="1366977240">
+		<input type="hidden" name="SIGNATURE" value="AFcWxV21C7fd0v3bYYYRCpSSRl31A-Soi0kN1Yqi4W.0lFNwJkp2.L9L">
+		<input type="hidden" name="VERSION" value="93.0">
+		<input type="hidden" name="PAYMENTREQUEST_0_PAYMENTACTION" value="Sale">
+		<input name="PAYMENTREQUEST_0_AMT" value="13.00">
+		<input type="hidden" name="RETURNURL" value="http://localhost:8080/pecege/servlet/Controller?cmd=abririnscricao&idCurso=858">
+		<input type="hidden" name="CANCELURL" value="https://www.youtube.com">
+		<input type="submit" name="METHOD" value="SetExpressCheckout">
+	</form>-->
+	
+	<!--<form method="post" action="https://api-3t.sandbox.paypal.com/nvp" target="_top">
+		<input type="hidden" name="USER" value="r-xsilva-facilitator_api1.ig.com.br">
+		<input type="hidden" name="PWD" value="1366977240">
+		<input type="hidden" name="SIGNATURE" value="AFcWxV21C7fd0v3bYYYRCpSSRl31A-Soi0kN1Yqi4W.0lFNwJkp2.L9L">
+		<input type="hidden" name="VERSION" value="93.0">
+		<input type="hidden" name="SUBJECT" value="r-xsilva-facilitador@ig.com.br">
+		<input type="submit" name="METHOD" value="SetExpressCheckout">
+		<input type="hidden" name="PAYMENTREQUEST_0_PAYMENTACTION" value="Sale">
+		<input type="hidden" name="PAYMENTREQUEST_0_AMT" value="22.00">
+		<input type="hidden" name="PAYMENTREQUEST_0_CURRENCYCODE" value="BRL">
+		<input type="hidden" name="PAYMENTREQUEST_0_ITEMAMT" value="22.00">
+		<input type="hidden" name="PAYMENTREQUEST_0_INVNUM" value="4321">
+		<input type="hidden" name="L_PAYMENTREQUEST_0_NAME0" value="Item A">
+		<input type="hidden" name="L_PAYMENTREQUEST_0_DESC0" value="Produto A – 110V">
+		<input type="hidden" name="L_PAYMENTREQUEST_0_AMT0" value="11.00">
+		<input type="hidden" name="L_PAYMENTREQUEST_0_QTY0" value="1">
+		<input type="hidden" name="L_PAYMENTREQUEST_0_ITEMAMT" value="11.00">
+		<input type="hidden" name="L_PAYMENTREQUEST_0_NAME1" value="Item B">
+		<input type="hidden" name="L_PAYMENTREQUEST_0_DESC1" value="Produto B – 220V">
+		<input type="hidden" name="L_PAYMENTREQUEST_0_AMT1" value="11.00">
+		<input type="hidden" name="L_PAYMENTREQUEST_0_QTY1" value="1">
+		<input type="hidden" name="RETURNURL" value="http://www.google.com.br">
+		<input type="hidden" name="CANCELURL" value="http://PayPalPartner.com.br/CancelaFrete">
+		<input type="hidden" name="BUTTONSOURCE" value = "BR_EC_EMPRESA">
+	</form>-->
+	<!-- compra que deu certo -->
+<!--<form class="paypal-button" method="post" action="https://sandbox.paypal.com/cgi-bin/webscr" target="_top">
+	<input type="hidden" name="button" value="buynow">
+	<input type="hidden" name="item_name" value="camisa">
+	<input type="hidden" name="quantity" value="2">
+	<input type="hidden" name="amount" value="1.50">
+	<input type="hidden" name="currency_code" value="BRL">
+	<input type="hidden" name="shipping" value="0.00">
+	<input type="hidden" name="tax" value="0.00">
+	<input type="hidden" name="notify_url" value="http://localhost:8081/PayPal/buynow.html">
+	<input type="hidden" name="env" value="sandbox">
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="business" value="vendedor@ig.com.br">
+	<input type="hidden" name="bn" value="JavaScriptButton_buynow">
+	<button class="paypal-button large" type="submit">Comprar agora</button>
+</form>-->
+<form class="paypal-button" method="post" action="https://sandbox.paypal.com/cgi-bin/webscr" target="_top">
+	<input type="hidden" name="button" value="buynow">
+	<input type="hidden" name="item_name" value="camisa">
+	<input type="hidden" name="quantity" value="2">
+	<input type="hidden" name="amount" value="15.00">
+	<input type="hidden" name="currency_code" value="BRL">
+	<input type="hidden" name="shipping" value="0.00">
+	<input type="hidden" name="tax" value="0.00">
+	<input type="hidden" name="notify_url" value="http://localhost:8081/PayPal/buynow.html">
+	<input type="hidden" name="env" value="sandbox">
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="business" value="vendedor@ig.com.br">
+	<input type="hidden" name="bn" value="JavaScriptButton_buynow">
+	<button class="paypal-button large" type="submit">Comprar agora</button>
+</form>
+   <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="vendedor@ig.com.br">
+            <input type="hidden" name="lc" value="BR">
+            <input type="hidden" name="item_name" value="lapis">
+            <input type="hidden" name="amount" value="1.50">
+            <input type="hidden" name="currency_code" value="BRL">
+            <input type="hidden" name="button_subtype" value="services">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="cn" value="Adicionar instruções especiais para o vendedor">
+            <input type="hidden" name="no_shipping" value="2">
+            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+            <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - A maneira mais fácil e segura de efetuar pagamentos online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+        </form>-->
+</body>
+</html>

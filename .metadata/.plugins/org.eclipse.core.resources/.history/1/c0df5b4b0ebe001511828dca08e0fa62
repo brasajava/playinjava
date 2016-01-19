@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/html">
+	<h:head>
+		<title> My Response</title>
+	</h:head>
+	<h:body>
+		Hello, #{theUserName}.
+	</h:body>
+
+</html>

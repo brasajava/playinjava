@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Ricardo\Documents\GitHub\playinjava\boot-faces"/>
+			<item value="C:\Users\Ricardo\Documents\GitHub\playinjava\PayPal"/>
+			<item value="C:\Users\Ricardo\Documents\GitHub\playinjava\spring_boot_with_jsf"/>
+			<item value="C:\Users\Ricardo\Documents\GitHub\playinjava\spring_boot_thymeleaf"/>
+			<item value="C:\Users\Ricardo\Documents\GitHub\playinjava\spring_boot"/>
+			<item value="C:\Users\Ricardo\Documents\GitHub\playinjava\HelloWorld"/>
+			<item value="C:\Users\Ricardo\Documents\GitHub\playinjava\DerbySample"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

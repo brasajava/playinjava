@@ -1,0 +1,156 @@
+body
+{
+	background:#ccc;/*fundo cinza claro em volta do layout*/
+	color:#333; /*texto na cor preta*/
+	margin: 0;/*setando padrao para todos os navegadores*/
+	padding: 0;/*setando padrao para todos os navegadores*/
+	font: 12px/1.4 Verdana, arial, helvetica, sans-serif;
+	text-align:center;
+}
+#tudo
+{
+	width: 1100px;/*largura da pagina*/
+	border: 1px solid #000;
+	margin: 0 auto;
+	text-align:left;
+	background: #fff;/*fundo branco do layout*/
+}
+#topo
+{
+	position:relative;
+	width:1100px;/*largura do topo*/
+	height:100px; /*altura do topo*/
+	background: #f60 url('imagens/bg-topo.jpg') no-repeat;/*imagem de fundo*/
+}
+#topo h1
+{
+	position:absolute;
+	left:50px;
+	top:15px;
+	font-size:35px;
+	margin:0px;/*evita uma margem no topo*/
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #00FFFF, 0 0 70px #00FFFF, 0 0 80px #00FFFF, 0 0 100px #00FFFF, 0 0 150px #00FFFF;
+	color:#FFFFFF;
+}
+ul#lista
+{
+	position:absolute;
+	left:50px;
+	top:75px;
+	margin:0px;
+	padding:0px;
+}
+
+ul#lista li
+{
+
+	display:inline;/*coloca os links em linha*/
+	margin-right: 5px;
+	list-style-type: none;/*remove a marcação dos links*/
+}
+
+ul#lista li a
+{
+	float:left;
+	color: #fff;/*texto do link na cor branca*/
+	font-size:11px;
+	font-weight: bold;
+	text-decoration:none;/*retira o sublinhado dos links*/
+	text-transform: uppercase;/*letras maiucula*/
+	padding: 3px 15px 7px 15px;/*insere um espaço entre o texto do link e a borda de cada item da lista*/
+	margin-right:25px;
+}
+ul#lista li a:hover
+{
+	background:#000;
+	text-decoration:blink;
+	text-shadow:6px 6px 6px #3cdfdf;
+}
+
+#busca
+{
+	position:absolute;
+	right:20px;
+	top:75px;
+	margin: 0px;/*padronizando as margens em todos os navegadores*/
+	padding:0px;/*padronizando as margens em todos os navegadores*/
+	color:#fff;/* cor branca para o texto*/
+	font-size:11px;
+	font-weight: bold;
+}
+
+#busca label input
+{
+	background:#fcc;/*cor de fundo do campo busca*/
+	border:none;
+}
+
+#busca input#submit
+{
+	background:#c30;/*cor de fundo do botao ok*/
+	border:2px outset #f66;
+	color:#fff;/*cor do texto do botao*/
+	font-size:10px;
+}
+#principal
+{
+	width:630px;
+	height:391px;
+	float:left;
+	margin-left:50px;
+}
+#auxiliar
+{
+	width:300px;
+	float:right;
+
+}
+#auxiliar p
+{
+	text-align:center;
+}
+#auxiliar p a
+{
+	text-decoration:none;/*remove o sublinhado do link*/
+	color :#FF6600;
+}
+#auxiliar p a:hover
+{
+	color:red;/*cor vermelha ao passar mouse no link*/
+}
+#rodape
+{
+	height:20px;/*altura do rodape*/
+	clear:both;/*impede elementos flutuantes*/
+	background:#fc6;/*cor de fundo*/
+	
+}
+#rodape p
+{
+	margin:0;
+	font-size:11px;
+	line-height:2;
+	left:50px;
+	position:relative;
+	width:930px;
+}
+h2
+{
+	font-size:26px;
+	color:#0056a6;
+}
+#produto
+{
+width:117px;
+}
+#lista2
+{
+	 margin-top: 15px;
+}
+#listas select
+{
+	margin-right:25px;
+}
+select{
+	width:116px;
+}
