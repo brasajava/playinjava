@@ -9,7 +9,9 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope("request")
 public class Welcome {
-	public String hello = "Welcome to my hello world";
+	private String hello = "Welcome to my hello world";
+	private String name;
+	private String lastname;
 	
 	
 	public Welcome(){
@@ -18,6 +20,22 @@ public class Welcome {
 
 	public String getHello() {
 		return hello;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
 	public void setHello(String hello) {
