@@ -1,0 +1,13 @@
+package com.brasajava.services;
+
+import com.brasajava.beans.Person;
+import com.brasajava.repositories.PersonRepository;
+
+public interface PersonService{
+	
+	void setRepository(PersonRepository repository);
+	void save(Person person);
+	void delete(Person person);
+	void edit(Person person);
+	Person get(Long id);
+}

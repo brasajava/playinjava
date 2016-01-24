@@ -9,6 +9,7 @@
 	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
 	<h:head>
 		<title>Home - JSF</title>
+		<h:outputStylesheet name="myStyle.css" library="css"/>
 	</h:head>
 	<h:body>
 		<h1>Home Page of JSF</h1>
@@ -18,7 +19,8 @@
 		<h:form>
 			<p:inputText value="#{welcome.name}"/><br/>
 			<p:inputText value="#{welcome.lastname}"/><br/>
-			<p:commandButton value="Send" action="myResponse"/>
+			<p:inputText value="#{welcome.age}"/><br/>
+			<p:commandButton value="Send" actionListener="#{welcome.add}" action="myResponse"/>
 		</h:form>
 		
 		<p>Form without ManagedBean</p>

@@ -1,0 +1,97 @@
+package com.brasajava.spring.managedbeans;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+import com.brasajava.beans.Person;
+import com.brasajava.services.PersonService;
+
+@Component
+@Scope("request")
+public class Welcome {
+	private String hello = "Welcome to my hello world";
+	private long id;
+	private String name;
+	private String lastname;
+	private int age;
+
+	@Autowired
+	private Person person;
+	@Autowired
+	private PersonService service;
+
+	public void add() {
+		person.setAge(this.age);
+		person.setId(this.id);
+		person.setLastname(this.lastname);
+		person.setName(this.name);
+		service.save(this.person);
+	}
+
+	public Welcome() {
+		System.out.println(hello);
+	}
+
+	public String getHello() {
+		return hello;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public void setHello(String hello) {
+		this.hello = hello;
+	}
+
+	@PostConstruct
+	public void init() {
+		System.out.println("Welcome init");
+	}
+
+	@PreDestroy
+	public void destroy() {
+		System.out.println("Welcome predestroy");
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
+}

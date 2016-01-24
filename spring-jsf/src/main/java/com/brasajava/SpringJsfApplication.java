@@ -10,7 +10,7 @@ import org.springframework.boot.context.embedded.ServletRegistrationBean;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 
-import com.brasajava.scope.ViewScope;
+import com.brasajava.scope.jsf.to.spring.ViewScope;
 
 @SpringBootApplication
 public class SpringJsfApplication extends SpringBootServletInitializer{

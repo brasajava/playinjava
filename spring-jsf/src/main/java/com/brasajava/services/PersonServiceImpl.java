@@ -1,0 +1,45 @@
+package com.brasajava.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.brasajava.beans.Person;
+import com.brasajava.repositories.PersonRepository;
+
+@Service
+public class PersonServiceImpl implements PersonService {
+	@Autowired
+	private PersonRepository repository;
+
+	@Override
+	public Person save(Person person) {
+		return repository.save(person);
+	}
+
+	@Override
+	public void delete(Person person) {
+		repository.delete(person);
+	}
+
+	@Override
+	public void edit(Person person) {
+		repository.save(person);
+	}
+
+	@Override
+	public Person getPerson(Long id) {
+		return repository.findOne(id);
+	}
+
+	@Override
+	public void setRepository(PersonRepository repository) {
+		this.repository = repository;
+	}
+	
+	@Override
+	public List<Person> getList(){
+		return repository.findAll();
+	}
+}

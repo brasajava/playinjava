@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+	<h:head>
+		<title>Home - JSF</title>
+	</h:head>
+	<h:body>
+		<h1>Home Page of JSF</h1>
+		
+		<h3>#{welcome.hello}</h3>
+		<p>Form with ManagedBean</p>
+		<h:form>
+			<p:inputText value="#{welcome.name}"/><br/>
+			<p:inputText value="#{welcome.lastname}"/><br/>
+			<p:inputText value="#{welcome.age}"/><br/>
+			<p:commandButton value="Send" actionListener="#{welcome.add()}"/>
+		</h:form>
+		
+		<p>Form without ManagedBean</p>
+		<h:form>
+			<h:inputText id="name" value="#{theUserName}" a:placeholder="what is your name?"/><br/>
+			<h:commandButton value="Submit" action="myResponse"/>
+		</h:form>
+		<h2>Default Template</h2>
+		<a href="defaultTemplate.jsf">Default </a>
+		<br/>
+		<h2>Customized Template</h2>
+		<a href="customizedTemplate.jsf">Customized </a>
+	</h:body>
+</html>

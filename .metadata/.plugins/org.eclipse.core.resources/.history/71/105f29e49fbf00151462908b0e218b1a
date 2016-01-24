@@ -1,0 +1,36 @@
+package com.brasajava.beans;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("request")
+public class Welcome {
+	public String hello = "Welcome to my hello world";
+	
+	
+	public Welcome(){
+		System.out.println(hello);
+	}
+
+	public String getHello() {
+		return hello;
+	}
+
+	public void setHello(String hello) {
+		this.hello = hello;
+	}
+	@PostConstruct
+	public void init(){
+		System.out.println("Welcome init");
+	}
+
+	@PreDestroy
+	public void destroy(){
+		System.out.println("Welcome predestroy");
+	}
+
+}
