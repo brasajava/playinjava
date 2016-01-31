@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.brasajava.beans.Person;
+import com.brasajava.beans.User;
 import com.brasajava.services.PersonService;
 
 @Component
@@ -21,22 +21,22 @@ public class Welcome {
 	private int age;
 
 	@Autowired
-	private Person person;
+	private User person;
 	@Autowired
 	private PersonService service;
 
 	@Transactional
 	public String add() {
-		person.setAge(this.age);
+		person.setLevel(this.age);
 		person.setId(this.id);
 		person.setLastname(this.lastname);
 		person.setName(this.name);
 		this.person = service.save(this.person);
-		this.age = person.getAge();
+		this.age = person.getLevel();
 		this.id = person.getId();
 		this.lastname = person.getLastname();
 		this.name = person.getName();
-		for(Person p: service.getList()){
+		for(User p: service.getList()){
 			System.out.println(p.getName());
 		}
 		return "myResponse";
@@ -96,11 +96,11 @@ public class Welcome {
 		this.age = age;
 	}
 
-	public Person getPerson() {
+	public User getPerson() {
 		return person;
 	}
 
-	public void setPerson(Person person) {
+	public void setPerson(User person) {
 		this.person = person;
 	}
 

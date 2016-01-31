@@ -2,15 +2,15 @@ package com.brasajava.services;
 
 import java.util.List;
 
-import com.brasajava.beans.Person;
-import com.brasajava.repositories.PersonRepository;
+import com.brasajava.beans.User;
+import com.brasajava.repositories.UserRepository;
 
 public interface PersonService{
 	
-	void setRepository(PersonRepository repository);
-	Person save(Person person);
-	void delete(Person person);
-	void edit(Person person);
-	Person getPerson(Long id);
-	List<Person> getList();
+	void setRepository(UserRepository repository);
+	User save(User person);
+	void delete(User person);
+	void edit(User person);
+	User getPerson(Long id);
+	List<User> getList();
 }

@@ -1,44 +1,33 @@
 package com.brasajava.beans;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
-import org.springframework.stereotype.Component;
+public interface Person {
 
-@Entity
-@Component
-public class Person {
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
-	private String name;
-	private String lastname;
-	private int age;
-	
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getLastname() {
-		return lastname;
-	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
+	LocalDate getBirthday();
+	void setBirthday(LocalDate birthday);
+	String getDocType();
+	void setDocType(String docType);
+	String getDocNumber();
+	void setDocNumber(String docNumber);
+	LocalDate getStartDate();
+	void setStartDate(LocalDate startDate);
+	String getLoginName();
+	void setLoginName(String loginName);
+	String getPassword();
+	void setPassword(String password);
+	BigDecimal getBalance();
+	void setBalance(BigDecimal balance);
+	long getId();
+	void setId(long id);
+	String getName();
+	void setName(String name);
+	String getLastname();
+	void setLastname(String lastname);
+	Boolean isActive();
+	void setActive(Boolean active);
+	void setLevel(int level);
+	int getLevel();
+
 }
