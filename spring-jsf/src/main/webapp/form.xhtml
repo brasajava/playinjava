@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/xml/xhtml"
+<html xmlns="http://www.w3.org/1999/xhtml"
 	  xmlns:h="http://java.sun.com/jsf/html"
 	  xmlns:ui="http://java.sun.com/jsf/facelets"
 	  xmlns:f="http://java.sun.com/jsf/core"
@@ -11,7 +11,67 @@
 	  		<ui:define name="body">
 	  		
 	  			<h:form>
-	  				<p:inputText a:placeholder="Name"/>
+	  				<p:inputText id="userId" value="#{userManagedBean.id}"/>
+	  				<p:inputText id="name" value="#{userManagedBean.name}" a:placeholder="Name"/>
+	  				<p:inputText id="lastname" value="#{userManagedBean.lastname}" a:placeholder="Lastname"/>
+	  				<p:inputText id="birthday" value="#{userManagedBean.stringBirthday}" a:placeholder="Birthday"/>
+	  				<p:inputText id="loginName" value="#{userManagedBean.loginName}" a:placeholder="Login Name"/>
+	  				<p:inputText id="password" value="#{userManagedBean.password}" a:placeholder="Password"/>
+	  				<p:inputText id="docType" value="#{userManagedBean.docType}" a:placeholder="Document Type"/>
+	  				<p:inputText id="docNumber" value="#{userManagedBean.docNumber}" a:placeholder="Document Number"/>
+	  				<p:inputText id="level" value="#{userManagedBean.level}" a:placeholder="5"/>
+	  				<p:inputText id="balance" value="#{userManagedBean.balance}" a:placeholder="Balance"/>
+	  				<p:commandButton value="Save" actionListener="#{userManagedBean.add}" action="myResponse" update="table"/>
+	  				<p:commandButton value="New" actionListerner="#{userManagedBean.newUser()}" action="form"/>
+	  			
+	  			<br/><br/>
+	  			
+	  			<p:dataTable id="table" value="#{userManagedBean.list}" var="user">
+	  				<p:column headerText="ID">
+	  					<h:outputText value="#{user.id}"/>
+	  				</p:column>
+	  				<p:column headerText="NAME">
+	  					<h:outputText value="#{user.name}"/>
+	  				</p:column>
+	  				<p:column headerText="LASTNAME">
+	  					<h:outputText value="#{user.lastname}"/>
+	  				</p:column>
+	  				<p:column headerText="BIRTHDAY">
+	  					<h:outputText value="#{user.birthday}"/>
+	  				</p:column>
+	  				<p:column headerText="DOCTYPE">
+	  					<h:outputText value="#{user.docType}"/>
+	  				</p:column>
+	  				<p:column headerText="DOCNUMBER">
+	  					<h:outputText value="#{user.docNumber}"/>
+	  				</p:column>	  				
+	  				<p:column headerText="LOGIN NAME">
+	  					<h:outputText value="#{user.loginName}"/>
+	  				</p:column>	  				
+	  				<p:column headerText="PASSWORD">
+	  					<h:outputText value="#{user.password}"/>
+	  				</p:column>
+	  				<p:column headerText="LEVEL">
+	  					<h:outputText value="#{user.level}"/>
+	  				</p:column>
+	  				<p:column headerText="BALANCE">
+	  					<h:outputText value="#{user.balance}"/>
+	  				</p:column>
+	  				<p:column headerText="START DATE">
+	  					<h:outputText value="#{user.startDate}"/>
+	  				</p:column>
+	  				<p:column headerText="ACTIVE">
+	  					<h:outputText value="#{user.active}"/>
+	  				</p:column>
+	  			</p:dataTable>
+	  			
+	  			otra tabla
+	  			<p:dataTable id="table1" value="#{userManagedBean.list}" var="user">
+	  				<p:column headerText="ID">
+	  					<h:outputText value="#{user.name}"/>
+	  				</p:column>
+	  			</p:dataTable>
+	  			
 	  			</h:form>
 	  		</ui:define>
 	  	</ui:composition>

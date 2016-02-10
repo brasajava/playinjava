@@ -2,41 +2,44 @@ package com.brasajava.jsf.spring.managedbeans;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.brasajava.beans.User;
-import com.brasajava.services.PersonService;
+import com.brasajava.services.JpaService;
 
-@Component
-@Scope("view")
+@ManagedBean
+@RequestScoped
 public class Welcome {
 	private String hello = "Welcome to my hello world";
 	private long id;
 	private String name;
 	private String lastname;
-	private int age;
+	private int level;
 
 	@Autowired
+	@Qualifier("user")
 	private User person;
 	@Autowired
-	private PersonService service;
+	@Qualifier("userServiceImpl")
+	private JpaService<User> service;
 
 	@Transactional
 	public String add() {
-		person.setLevel(this.age);
+		person.setLevel(this.level);
 		person.setId(this.id);
 		person.setLastname(this.lastname);
 		person.setName(this.name);
 		this.person = service.save(this.person);
-		this.age = person.getLevel();
+		this.level = person.getLevel();
 		this.id = person.getId();
 		this.lastname = person.getLastname();
 		this.name = person.getName();
-		for(User p: service.getList()){
+		for(User p: service.findAll()){
 			System.out.println(p.getName());
 		}
 		return "myResponse";
@@ -88,12 +91,12 @@ public class Welcome {
 		this.id = id;
 	}
 
-	public int getAge() {
-		return age;
+	public int getLevel() {
+		return level;
 	}
 
-	public void setAge(int age) {
-		this.age = age;
+	public void setLevel(int level) {
+		this.level = level;
 	}
 
 	public User getPerson() {

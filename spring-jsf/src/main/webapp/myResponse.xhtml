@@ -8,13 +8,18 @@
 	</h:head>
 	<h:body>
 		<h3>Person Bean data</h3>
-		Hello, #{person.name} #{person.lastname}
+		Hello, #{user.name} #{user.lastname}
 		<h3>ManagedBean data</h3>
-		Hello, #{welcome.id} #{welcome.name} #{welcome.lastname}, with #{welcome.age}.
+		Hello, #{welcome.id} #{welcome.name} #{welcome.lastname}, with #{welcome.level}.
 		<br/>
 		<h3>Page data</h3>
 		Hello, #{theUserName}
 		<a href="public/organizedResponse.jsf">Public Folder</a>
+		<br/>
+		
+		<h:form>
+		<p:commandButton value="Form" action="form.jsf"/>
+		</h:form>
 	</h:body>
 
 </html>

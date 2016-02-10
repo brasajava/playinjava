@@ -25,8 +25,8 @@ public interface Person {
 	void setName(String name);
 	String getLastname();
 	void setLastname(String lastname);
-	Boolean isActive();
-	void setActive(Boolean active);
+	Boolean getActive();
+	void setActive(boolean active);
 	void setLevel(int level);
 	int getLevel();
 

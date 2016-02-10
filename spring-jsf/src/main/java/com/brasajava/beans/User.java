@@ -1,18 +1,22 @@
 package com.brasajava.beans;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import org.springframework.stereotype.Component;
+import javax.persistence.OneToOne;
 
 @Entity
-@Component
-public class User implements Person{
+public class User implements Person, Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6957682884829108490L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
@@ -27,6 +31,23 @@ public class User implements Person{
 	private String password;
 	private BigDecimal balance;
 	private int level;
+	@OneToOne(cascade=CascadeType.ALL)
+	private Address address;
+	@OneToOne(cascade=CascadeType.ALL)
+	private Contact contact;
+	
+	public void setContact(Contact contact){
+		this.contact = contact;
+	}
+	public Contact getContact(){
+		return contact;
+	}
+	public void setAddress(Address address){
+		this.address = address;
+	}
+	public Address getAddress(){
+		return address;
+	}
 	
 	@Override
 	public LocalDate getBirthday() {
@@ -109,11 +130,11 @@ public class User implements Person{
 		this.lastname = lastname;
 	}
 	@Override
-	public Boolean isActive() {
+	public Boolean getActive() {
 		return active;
 	}
 	@Override
-	public void setActive(Boolean active) {
+	public void setActive(boolean active) {
 		this.active = active;
 	}
 	@Override

@@ -7,31 +7,45 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
-	<h:head>
-		<title>Home - JSF</title>
-		<h:outputStylesheet name="myStyle.css" library="css"/>
-	</h:head>
-	<h:body>
-		<h1>Home Page of JSF</h1>
-		
-		<h3>#{welcome.hello}</h3>
-		<p>Form with ManagedBean</p>
-		<h:form>
-			<p:inputText value="#{welcome.name}"/><br/>
-			<p:inputText value="#{welcome.lastname}"/><br/>
-			<p:inputText value="#{welcome.age}"/><br/>
-			<p:commandButton value="Send" actionListener="#{welcome.add}" action="myResponse"/>
-		</h:form>
-		
-		<p>Form without ManagedBean</p>
-		<h:form>
-			<h:inputText id="name" value="#{theUserName}" a:placeholder="what is your name?"/><br/>
-			<h:commandButton value="Submit" action="myResponse"/>
-		</h:form>
-		<h2>Default Template</h2>
-		<a href="defaultTemplate.jsf">Default </a>
-		<br/>
-		<h2>Customized Template</h2>
-		<a href="customizedTemplate.jsf">Customized </a>
-	</h:body>
+<h:head>
+	<title>Home - JSF</title>
+	<h:outputStylesheet name="myStyle.css" library="css" />
+</h:head>
+<h:body>
+	<h1>Home Page of JSF</h1>
+
+	<h3>#{welcome.hello}</h3>
+	<p>Form with ManagedBean</p>
+	<h:form>
+		<p:inputText value="#{welcome.name}" />
+		<br />
+		<p:inputText value="#{welcome.lastname}" />
+		<br />
+		<p:inputText value="#{welcome.level}" />
+		<br />
+		<p:commandButton value="Send" actionListener="#{welcome.add()}"
+			action="myResponse" />
+	</h:form>
+
+	<p>Form without ManagedBean</p>
+	<h:form>
+		<h:inputText id="name" value="#{theUserName}"
+			a:placeholder="what is your name?" />
+		<br />
+		<h:commandButton value="Submit" action="myResponse" />
+	</h:form>
+	<h2>Default Template</h2>
+	<a href="defaultTemplate.jsf">Default </a>
+	<br />
+	<h2>Customized Template</h2>
+	<a href="customizedTemplate.jsf">Customized </a>
+	
+	otra tabla
+	  			<p:dataTable id="table1" value="#{userManagedBean.tabla()}"
+		var="user">
+		<p:column headerText="ID">
+			<h:outputText value="#{user.name}" />
+		</p:column>
+	</p:dataTable>
+</h:body>
 </html>
