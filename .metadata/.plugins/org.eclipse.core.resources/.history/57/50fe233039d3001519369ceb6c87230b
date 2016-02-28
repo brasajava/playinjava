@@ -1,0 +1,83 @@
+package com.brasajava.jsf.spring.managedbeans;
+
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.ViewScoped;
+
+import com.brasajava.beans.Address;
+import com.brasajava.beans.Contact;
+import com.brasajava.beans.User;
+import com.brasajava.services.JpaService;
+
+@ManagedBean
+@ViewScoped
+public class UserManagedBeanController {
+	@ManagedProperty(value="#{userServiceImpl}")
+	private JpaService<User> userService;
+	@ManagedProperty(value="#{addressServiceImpl}")
+	private JpaService<Address> addressService;
+	@ManagedProperty(value="#{contactServiceImpl}")
+	private JpaService<Contact> contactService;
+	private List<User> userList;
+	private List<Address> addressList;
+	private List<Contact> contactList;
+	
+	@PostConstruct
+	public void init(){
+		userList = userService.findAll();
+		addressList = addressService.findAll();
+		contactList = contactService.findAll();
+	}
+
+	public JpaService<User> getUserService() {
+		return userService;
+	}
+
+	public void setUserService(JpaService<User> userService) {
+		this.userService = userService;
+	}
+
+	public JpaService<Address> getAddressService() {
+		return addressService;
+	}
+
+	public void setAddressService(JpaService<Address> addressService) {
+		this.addressService = addressService;
+	}
+
+	public JpaService<Contact> getContactService() {
+		return contactService;
+	}
+
+	public void setContactService(JpaService<Contact> contactService) {
+		this.contactService = contactService;
+	}
+
+	public List<User> getUserList() {
+		return userList;
+	}
+
+	public void setUserList(List<User> userList) {
+		this.userList = userList;
+	}
+
+	public List<Address> getAddressList() {
+		return addressList;
+	}
+
+	public void setAddressList(List<Address> addressList) {
+		this.addressList = addressList;
+	}
+
+	public List<Contact> getContactList() {
+		return contactList;
+	}
+
+	public void setContactList(List<Contact> contactList) {
+		this.contactList = contactList;
+	}
+
+}

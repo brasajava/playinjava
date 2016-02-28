@@ -1,0 +1,5 @@
+package com.brasajava.util;
+
+public class PersistenceUtil {
+
+}

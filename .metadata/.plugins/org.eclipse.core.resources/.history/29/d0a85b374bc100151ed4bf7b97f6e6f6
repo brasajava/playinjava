@@ -1,9 +1,0 @@
-package com.brasajava;
-
-import org.springframework.data.repository.Repository;
-
-import com.brasajava.beans.Person;
-
-public interface PersonService extends Repository<Person, Long>{
-
-}

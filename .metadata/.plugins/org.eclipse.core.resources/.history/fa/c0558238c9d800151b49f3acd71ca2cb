@@ -1,0 +1,28 @@
+package com.brasajava.managedbean;
+
+import javax.faces.bean.RequestScoped;
+import javax.inject.Named;
+
+@Named
+@RequestScoped
+public class Welcome {
+
+	private String hello = "Hello JSF";
+	
+	public void init(){
+		System.out.println("Init Method");
+	}
+	public void destroy(){
+		System.out.println("Destroy Method");
+	}
+
+	public String getHello() {
+		return hello;
+	}
+
+	public void setHello(String hello) {
+		this.hello = hello;
+	}
+	
+	
+}

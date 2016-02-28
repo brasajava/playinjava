@@ -1,0 +1,7 @@
+package com.brasajava.repositories;
+
+import com.brasajava.beans.Contact;
+
+public interface ContactRepository extends JpaRepository<Contact>{
+
+}

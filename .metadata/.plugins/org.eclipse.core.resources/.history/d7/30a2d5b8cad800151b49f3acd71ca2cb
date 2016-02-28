@@ -1,0 +1,7 @@
+package com.brasajava.repositories;
+
+import com.brasajava.beans.Address;
+
+public interface AddressRepository extends JpaRepository<Address>{
+
+}

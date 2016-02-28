@@ -1,0 +1,3 @@
+INSERT INTO user(name) VALUES('admin')
+INSERT INTO user(name) VALUES('admin')
+

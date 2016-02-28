@@ -1,0 +1,26 @@
+package com.brasajava;
+
+import java.util.logging.Logger;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import com.brasajava.beans.User;
+
+public class App {
+
+	//private static Logger log = Logger.getGlobal();
+
+    public static void main(String[] args) {
+
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+
+        User found = entityManager.find(User.class, 1L);
+        System.out.println(found.getId() + " " + found.getName());
+       // log.info("found=" + found);
+    }
+
+
+}

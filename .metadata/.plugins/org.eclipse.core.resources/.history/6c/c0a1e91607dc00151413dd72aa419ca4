@@ -1,0 +1,15 @@
+INSERT INTO user(id, name) VALUES(1, 'admin'),INSERT INTO user(id, name) VALUES(2, 'admin');
+INSERT INTO user(id, name) VALUES(3, 'admin');
+INSERT INTO user(id, name) VALUES(4, 'admin');
+INSERT INTO user(id, name) VALUES(1, 'admin');
+INSERT INTO user(id, name) VALUES(1, 'admin');
+INSERT INTO user(id, name) VALUES(1, 'admin');
+INSERT INTO user(id, name) VALUES(1, 'admin');
+
+INSERT INTO user(id, name) VALUES(1, 'admin');
+
+INSERT INTO user(id, name) VALUES(1, 'admin');
+INSERT INTO user(id, name) VALUES(1, 'admin');INSERT INTO user(id, name) VALUES(1, 'admin');
+INSERT INTO user(id, name) VALUES(1, 'admin');
+INSERT INTO user(id, name) VALUES(1, 'admin');
+INSERT INTO user(id, name) VALUES(1, 'admin');

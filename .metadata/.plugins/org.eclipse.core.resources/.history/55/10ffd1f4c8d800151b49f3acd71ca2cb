@@ -1,0 +1,22 @@
+package com.brasajava.managedbean;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.inject.Named;
+
+@Named
+@RequestScoped
+public class Welcome {
+
+	private String hello = "Hello JSF";
+
+	public String getHello() {
+		return hello;
+	}
+
+	public void setHello(String hello) {
+		this.hello = hello;
+	}
+	
+	
+}

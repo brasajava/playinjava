@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+<body>
+	<ui:composition template="/template/common/commonLayout.xhtml">
+	
+		<ui:define name="body">
+			<h:form id="form">
+			<p:accordionPanel>
+				<p:tab title="User">
+					
+						<p:inputText id="userId" value="#{userManagedBean.id}" />
+						<p:inputText id="name"	value="#{userManagedBean.name}"
+							a:placeholder="Name" />
+						<p:inputText id="lastname" value="#{userManagedBean.lastname}"
+							a:placeholder="Lastname" />
+						<p:inputText id="birthday"
+							value="#{userManagedBean.stringBirthday}"
+							a:placeholder="Birthday" />
+						<p:inputText id="docType" value="#{userManagedBean.docType}"
+							a:placeholder="Document Type" />
+						<p:inputText id="docNumber" value="#{userManagedBean.docNumber}"
+							a:placeholder="Document Number" />
+						<p:inputText id="level" value="#{userManagedBean.level}"
+							a:placeholder="5" />
+						<p:inputText id="balance" value="#{userManagedBean.balance}"
+							a:placeholder="Balance" />
+						<p:commandButton value="Save"	actionListener="#{userManagedBeanController.save()}" update="userTable addressTable form" />
+						<p:commandButton value="Clear"  actionListener="#{userManagedBeanController.userManagedBean.cleanUp()}" update="form" />
+
+					
+				</p:tab>
+				<p:tab title="Address">
+					
+						<p:inputText id="addressId" value="#{userManagedBean.address.id}" />
+						<p:inputText id="country" value="#{userManagedBean.address.country}"
+							a:placeholder="Country" />
+						<p:inputText id="state" value="#{userManagedBean.address.state}"
+							a:placeholder="State" />
+					
+				</p:tab>
+				<p:tab title="Contact">
+						<p:inputText id="loginName" value="#{userManagedBean.loginName}"
+							a:placeholder="youremail@host.com" />
+						<p:inputText id="password" value="#{userManagedBean.password}"
+							a:placeholder="Password" />
+						<p:inputText id="telephone" value="#{userManagedBean.telephoneNumber}"
+							a:placeholder="654321456" />
+				</p:tab>
+				<p:tab title="Contact">
+
+				</p:tab>
+			</p:accordionPanel>
+			</h:form>
+
+			<p:dataTable id="userTable" value="#{userManagedBeanController.userList}"
+				var="user">
+				<p:column headerText="ID">
+					<h:outputText value="#{user.id}" />
+				</p:column>
+				<p:column headerText="NAME">
+					<h:outputText value="#{user.name}" />
+				</p:column>
+				<p:column headerText="LASTNAME">
+					<h:outputText value="#{user.lastname}" />
+				</p:column>
+				<p:column headerText="BIRTHDAY">
+					<h:outputText value="#{user.birthday}" />
+				</p:column>
+				<p:column headerText="DOCTYPE">
+					<h:outputText value="#{user.docType}" />
+				</p:column>
+				<p:column headerText="DOCNUMBER">
+					<h:outputText value="#{user.docNumber}" />
+				</p:column>
+				<p:column headerText="LOGIN NAME">
+					<h:outputText value="#{user.loginName}" />
+				</p:column>
+				<p:column headerText="PASSWORD">
+					<h:outputText value="#{user.password}" />
+				</p:column>
+				<p:column headerText="LEVEL">
+					<h:outputText value="#{user.level}" />
+				</p:column>
+				<p:column headerText="BALANCE">
+					<h:outputText value="#{user.balance}" />
+				</p:column>
+				<p:column headerText="START DATE">
+					<h:outputText value="#{user.startDate}" />
+				</p:column>
+				<p:column headerText="ACTIVE">
+					<h:outputText value="#{user.active}" />
+				</p:column>
+			</p:dataTable>
+
+			<p:dataTable id="addressTable"
+				value="#{userManagedBeanController.addressList}" var="address">
+				<p:column headerText="ID">
+					<h:outputText value="#{address.id}" />
+				</p:column>
+				<p:column headerText="COUNTRY">
+					<h:outputText value="#{address.country}" />
+				</p:column>
+			</p:dataTable>
+
+			<p:dataTable id="tableContact"
+				value="#{userManagedBeanController.contactList}" var="contact">
+				<p:column headerText="ID">
+					<h:outputText value="#{contact.id}" />
+				</p:column>
+			</p:dataTable>
+
+		</ui:define>
+
+	</ui:composition>
+</body>
+</html>

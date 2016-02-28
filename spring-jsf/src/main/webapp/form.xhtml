@@ -9,9 +9,10 @@
 	  <body>
 	  	<ui:composition template="/template/common/commonLayout.xhtml">
 	  		<ui:define name="body">
-	  		
+	  		<p:accordionPanel>
+	  			<p:tab title="User">
 	  			<h:form>
-	  				<p:inputText id="userId" value="#{userManagedBean.id}"/>
+	  				<p:inputText id="userId" value="#{userManagedBean.userId}"/>
 	  				<p:inputText id="name" value="#{userManagedBean.name}" a:placeholder="Name"/>
 	  				<p:inputText id="lastname" value="#{userManagedBean.lastname}" a:placeholder="Lastname"/>
 	  				<p:inputText id="birthday" value="#{userManagedBean.stringBirthday}" a:placeholder="Birthday"/>
@@ -21,12 +22,28 @@
 	  				<p:inputText id="docNumber" value="#{userManagedBean.docNumber}" a:placeholder="Document Number"/>
 	  				<p:inputText id="level" value="#{userManagedBean.level}" a:placeholder="5"/>
 	  				<p:inputText id="balance" value="#{userManagedBean.balance}" a:placeholder="Balance"/>
-	  				<p:commandButton value="Save" actionListener="#{userManagedBean.add}" action="myResponse" update="table"/>
-	  				<p:commandButton value="New" actionListerner="#{userManagedBean.newUser()}" action="form"/>
+	  				<p:commandButton value="Save" actionListener="#{userManagedBean.add()}" update="table"/>
+	  				<p:commandButton value="Update" actionListener="#{userManagedBean.update()}" update="table"/>
+	  				<p:commandButton value="Save and Confirm" actionListener="#{userManagedBean.add}" action="myResponse" update="table"/>
+	  				<p:commandButton value="New" actionListerner="#{userManagedBean.clean()}" action="form"/>
+	  				
+	  			</h:form>
+	  			</p:tab>
+	  			<p:tab title="Address">
+		  			<h:form>
+		  				<p:inputText id="addressId" value="#{userManagedBean.addressId}"/>
+		  				<p:inputText id="country" value="#{userManagedBean.country}" a:placeholder="Country"/>
+		  				<p:inputText id="state" value="#{userManagedBean.state}" a:placeholder="State"/>
+		  				<p:commandButton value="Save" actionListener="#{userManagedBean.addAddress}" update="tableAddress"/>
+		  			</h:form>
+	  			</p:tab>
+	  			<p:tab title="Contact">
+		  			
+	  			</p:tab>
+	  		</p:accordionPanel>
 	  			
-	  			<br/><br/>
 	  			
-	  			<p:dataTable id="table" value="#{userManagedBean.list}" var="user">
+	  			<p:dataTable id="table" value="#{userManagedBean.userList}" var="user">
 	  				<p:column headerText="ID">
 	  					<h:outputText value="#{user.id}"/>
 	  				</p:column>
@@ -65,14 +82,15 @@
 	  				</p:column>
 	  			</p:dataTable>
 	  			
-	  			otra tabla
-	  			<p:dataTable id="table1" value="#{userManagedBean.list}" var="user">
-	  				<p:column headerText="ID">
-	  					<h:outputText value="#{user.name}"/>
-	  				</p:column>
-	  			</p:dataTable>
+	  			<p:dataTable id="tableAddress" value="#{userManagedBean.addressList}" var="address">
+		  				<p:column headerText="ID">
+		  					<h:outputText value="#{address.id}"/>
+		  				</p:column>
+		  				<p:column headerText="COUNTRY">
+		  					<h:outputText value="#{address.country}"/>
+		  				</p:column>
+		  			</p:dataTable>
 	  			
-	  			</h:form>
 	  		</ui:define>
 	  	</ui:composition>
 	  </body>

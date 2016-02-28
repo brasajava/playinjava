@@ -1,0 +1,24 @@
+package com.brasajava.repositories;
+
+import java.util.List;
+
+import com.brasajava.beans.User;
+
+public class UserRepository implements JpaRepository<User>{
+
+	@Override
+	public User save(User t) {
+		return null;
+	}
+
+	@Override
+	public User getOne(long id) {
+		return null;
+	}
+
+	@Override
+	public List<User> findAll() {
+		return null;
+	}
+
+}

@@ -1,0 +1,7 @@
+127.0.0.1 - - [20/Feb/2016:12:32:40 +0100] "GET / HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [20/Feb/2016:12:32:41 +0100] "GET /pure-jsf/ HTTP/1.1" 200 391
+0:0:0:0:0:0:0:1 - - [20/Feb/2016:12:32:52 +0100] "GET /pure-jsf/index.jsf HTTP/1.1" 200 821
+0:0:0:0:0:0:0:1 - - [20/Feb/2016:12:32:52 +0100] "GET /pure-jsf/javax.faces.resource/myStyle.css.jsf?ln=css HTTP/1.1" 200 76
+0:0:0:0:0:0:0:1 - - [20/Feb/2016:12:32:52 +0100] "GET /pure-jsf/javax.faces.resource/jQuery.js.jsf?ln=javascript HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [20/Feb/2016:12:32:52 +0100] "GET /pure-jsf/javax.faces.resource/myJs.js.jsf?ln=javascript HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [20/Feb/2016:12:32:52 +0100] "GET /pure-jsf/javax.faces.resource/theme.css.jsf?ln=primefaces-aristo HTTP/1.1" 200 29138

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kb-project>
+ <depends-on-projects/>
+ <used-by-projects/>
+ <paths>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-storeconfig/8.0.30/tomcat-storeconfig-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-tribes/8.0.30/tomcat-tribes-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/jboss/weld/weld-api/2.3.Final/weld-api-2.3.Final.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-jasper/8.0.30/tomcat-jasper-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/catalina.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/hibernate/common/hibernate-commons-annotations/4.0.5.Final/hibernate-commons-annotations-4.0.5.Final.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/catalina-tribes.jar"/>
+  <path value="/pure-jsf/WebContent/WEB-INF/faces-config.xml">
+   <libraries>
+    <library class="faces-config">
+     <id class="model-object"
+      path="FileSystems/WEB-INF/faces-config.xml" project="pure-jsf"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/Ricardo/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.4.2/ecj-4.4.2.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/jboss/weld/weld-spi/2.3.Final/weld-spi-2.3.Final.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-api/8.0.30/tomcat-api-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/jasper.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/hibernate/hibernate-core/4.3.8.Final/hibernate-core-4.3.8.Final.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-i18n-fr/8.0.30/tomcat-i18n-fr-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/tomcat-jdbc.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-annotations-api/8.0.30/tomcat-annotations-api-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-catalina-ha/8.0.30/tomcat-catalina-ha-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/glassfish/javax.faces/2.2.0/javax.faces-2.2.0.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.0.jar/meta-inf/html_basic.tld" project="pure-jsf"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.0.jar/meta-inf/jsf_core.tld" project="pure-jsf"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.0.jar/meta-inf/mojarra_ext.taglib.xml" project="pure-jsf"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces-2.2.0.jar/meta-inf/mojarra_ext.tld" project="pure-jsf"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/Ricardo/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.0.Final/jboss-transaction-api_1.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/tomcat-dbcp.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/tomcat-util-scan.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/jboss/logging/jboss-logging-annotations/1.2.0.Beta1/jboss-logging-annotations-1.2.0.Beta1.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-jsp-api/8.0.30/tomcat-jsp-api-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-dbcp/8.0.30/tomcat-dbcp-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-util-scan/8.0.30/tomcat-util-scan-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-catalina/8.0.30/tomcat-catalina-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/tomcat-websocket.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/jboss/logging/jboss-logging/3.2.1.Final/jboss-logging-3.2.1.Final.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-i18n-es/8.0.30/tomcat-i18n-es-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-jdbc/8.0.30/tomcat-jdbc-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/servlet-api.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/tomcat-i18n-es.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-i18n-ja/8.0.30/tomcat-i18n-ja-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/tomcat-util.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-el-api/8.0.30/tomcat-el-api-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/jboss/spec/javax/el/jboss-el-api_3.0_spec/1.0.0.Alpha1/jboss-el-api_3.0_spec-1.0.0.Alpha1.jar"/>
+  <path value="C:/Users/Ricardo/Documents/GitHub/playinjava/libraries/JSF 2.2 (Mojarra 2.2.0)/mojarra-2.2.0-FCS/lib/javax.faces.jar">
+   <libraries>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces.jar/meta-inf/html_basic.tld" project="pure-jsf"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces.jar/meta-inf/jsf_core.tld" project="pure-jsf"/>
+    </library>
+    <library class="facelet">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces.jar/meta-inf/mojarra_ext.taglib.xml" project="pure-jsf"/>
+    </library>
+    <library class="tld">
+     <id class="model-object"
+      path="FileSystems/lib-javax.faces.jar/meta-inf/mojarra_ext.tld" project="pure-jsf"/>
+    </library>
+   </libraries>
+  </path>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/tomcat-i18n-fr.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/ecj-4.4.2.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/catalina-ha.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-servlet-api/8.0.30/tomcat-servlet-api-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/javax/enterprise/cdi-api/1.2/cdi-api-1.2.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-util/8.0.30/tomcat-util-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/tomcat-i18n-ja.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/jboss/jandex/1.1.0.Final/jandex-1.1.0.Final.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-coyote/8.0.30/tomcat-coyote-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-juli/8.0.30/tomcat-juli-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/tomcat-jni.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/jboss/weld/weld-core/2.3.2.Final/weld-core-2.3.2.Final.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/jsp-api.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/websocket-api.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-jni/8.0.30/tomcat-jni-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-websocket-api/8.0.30/tomcat-websocket-api-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/jboss/spec/javax/interceptor/jboss-interceptors-api_1.2_spec/1.0.0.Final/jboss-interceptors-api_1.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/jboss/classfilewriter/jboss-classfilewriter/1.1.2.Final/jboss-classfilewriter-1.1.2.Final.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/el-api.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-jasper-el/8.0.30/tomcat-jasper-el-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/tomcat-api.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-catalina-ant/8.0.30/tomcat-catalina-ant-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/catalina-ant.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/jasper-el.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/annotations-api.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/catalina-storeconfig.jar"/>
+  <path value="C:/Users/Ricardo/Downloads/apache-tomcat-8.0.30-windows-x64/apache-tomcat-8.0.30/lib/tomcat-coyote.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/apache/tomcat/tomcat-websocket/8.0.30/tomcat-websocket-8.0.30.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/org/jboss/spec/javax/annotation/jboss-annotations-api_1.2_spec/1.0.0.Final/jboss-annotations-api_1.2_spec-1.0.0.Final.jar"/>
+  <path value="C:/Users/Ricardo/.m2/repository/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar"/>
+ </paths>
+ <validation>
+  <core validator-id="jsf-verification"/>
+  <core validator-id="jboss.cdi.core"/>
+  <core validator-id="jboss.jsf.core"/>
+  <el>
+   <linked-el length="27" name="%0" offset="382" path="%1"/>
+   <linked-el length="27" name="%2" offset="382" path="%1"/>
+  </el>
+ </validation>
+ <aliases>
+  <alias path="/pure-jsf/WebContent/index.xhtml" value="%1"/>
+  <alias path="welcome.hello" value="%0"/>
+  <alias path="welcome" value="%2"/>
+ </aliases>
+ <includes/>
+ <uris>
+  <uri value="http://xmlns.jcp.org/jsf/core">
+   <prefix>f</prefix>
+  </uri>
+  <uri value="http://xmlns.jcp.org/jsf/html">
+   <prefix>h</prefix>
+  </uri>
+ </uris>
+</kb-project>

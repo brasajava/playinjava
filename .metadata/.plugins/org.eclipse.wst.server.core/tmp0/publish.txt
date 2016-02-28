@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Sun Feb 21 20:57:55 CET 2016
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Ricardo\\.m2\\repository\\org\\apache\\tomcat\\tomcat-jasper\\8.0.30\\tomcat-jasper-8.0.30.jar=WEB-INF/lib/tomcat-jasper-8.0.30.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\Ricardo\\.m2\\repository\\org\\apache\\tomcat\\tomcat-websocket\\8.0.30\\tomcat-websocket-8.0.30.jar=WEB-INF/lib/tomcat-websocket-8.0.30.jar
