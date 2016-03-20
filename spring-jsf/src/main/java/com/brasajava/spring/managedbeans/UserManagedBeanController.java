@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
-import com.brasajava.beans.Address;
-import com.brasajava.beans.Contact;
+import com.brasajava.beans.AddressImpl;
+import com.brasajava.beans.ContactManagerImpl;
 import com.brasajava.beans.User;
 import com.brasajava.services.JpaService;
 
@@ -21,14 +21,14 @@ public class UserManagedBeanController {
 	@Autowired
 	private JpaService<User> userService;
 	@Autowired
-	private JpaService<Address> addressService;
+	private JpaService<AddressImpl> addressService;
 	@Autowired
-	private JpaService<Contact> contactService;
+	private JpaService<ContactManagerImpl> contactService;
 	@Autowired
 	private UserManagedBean userManagedBean;
 	private List<User> userList;
-	private List<Address> addressList;
-	private List<Contact> contactList;
+	private List<AddressImpl> addressList;
+	private List<ContactManagerImpl> contactList;
 	
 	
 	
@@ -66,19 +66,19 @@ public class UserManagedBeanController {
 		this.userService = userService;
 	}
 
-	public JpaService<Address> getAddressService() {
+	public JpaService<AddressImpl> getAddressService() {
 		return addressService;
 	}
 
-	public void setAddressService(JpaService<Address> addressService) {
+	public void setAddressService(JpaService<AddressImpl> addressService) {
 		this.addressService = addressService;
 	}
 
-	public JpaService<Contact> getContactService() {
+	public JpaService<ContactManagerImpl> getContactService() {
 		return contactService;
 	}
 
-	public void setContactService(JpaService<Contact> contactService) {
+	public void setContactService(JpaService<ContactManagerImpl> contactService) {
 		this.contactService = contactService;
 	}
 	/*Services*/
@@ -93,19 +93,19 @@ public class UserManagedBeanController {
 		this.userList = userList;
 	}
 
-	public List<Address> getAddressList() {
+	public List<AddressImpl> getAddressList() {
 		return addressList;
 	}
 
-	public void setAddressList(List<Address> addressList) {
+	public void setAddressList(List<AddressImpl> addressList) {
 		this.addressList = addressList;
 	}
 
-	public List<Contact> getContactList() {
+	public List<ContactManagerImpl> getContactList() {
 		return contactList;
 	}
 
-	public void setContactList(List<Contact> contactList) {
+	public void setContactList(List<ContactManagerImpl> contactList) {
 		this.contactList = contactList;
 	}
 	/*End List Getters and Setters*/

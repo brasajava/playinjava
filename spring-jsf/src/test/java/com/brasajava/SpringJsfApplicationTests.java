@@ -12,7 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.brasajava.beans.Address;
-import com.brasajava.beans.Contact;
+import com.brasajava.beans.AddressImpl;
+import com.brasajava.beans.ContactManagerImpl;
 import com.brasajava.beans.Email;
 import com.brasajava.beans.Phone;
 import com.brasajava.beans.User;
@@ -30,10 +31,10 @@ public class SpringJsfApplicationTests {
 	private JpaService<User> service;
 	@Autowired
 	@Qualifier("addressServiceImpl")
-	private JpaService<Address> addressService;
+	private JpaService<AddressImpl> addressService;
 	@Autowired
 	@Qualifier("contactServiceImpl")
-	private JpaService<Contact> contactService;
+	private JpaService<ContactManagerImpl> contactService;
 	@Test
 	public void contextLoads() {
 		User user = new User();
@@ -49,7 +50,7 @@ public class SpringJsfApplicationTests {
 		user.setPassword("Ricardo2");
 		user.setStartDate(LocalDate.now());
 		
-		Address address = new Address();
+		AddressImpl address = new AddressImpl();
 		address.setCountry("España");
 		address.setState("Valencia");
 		address.setCity("Alicante");
@@ -60,34 +61,39 @@ public class SpringJsfApplicationTests {
 		
 		Email gmail = new Email();
 		gmail.setDescription("GMail");
-		gmail.setEmail("ricardomaximino@gmail.com");
+		gmail.setContact("ricardomaximino@gmail.com");
 		
 		Email hotmail = new Email();
 		hotmail.setDescription("HotMail");
-		hotmail.setEmail("ricardomaximino@hotmail.com");
+		hotmail.setContact("ricardomaximino@hotmail.com");
 		
 		Phone homePhone = new Phone();
 		homePhone.setDescription("Home");
-		homePhone.setPhone("966230267");
+		homePhone.setContact("966230267");
 		
 		Phone mobile = new Phone();
 		mobile.setDescription("Mobile");
-		mobile.setPhone("634753562");
+		mobile.setContact("634753562");
 		
-		Contact contact = new Contact();
+		ContactManagerImpl contact = new ContactManagerImpl();
 		contact.getEmails().add(gmail);
 		contact.getEmails().add(hotmail);
 		contact.getPhones().add(homePhone);
 		contact.getPhones().add(mobile);
 		
 		user.setAddress(address);
-		user.setContact(contact);
+		user.setContactManager(contact);
+		//addressService.save(address);
+		//contactService.save(contact);
 		addressService.saveAndFlush(address);
 		contactService.saveAndFlush(contact);
-		service.save(user);
+		service.saveAndFlush(user);
 		
 		for(User u : service.findAll()){
 			System.out.println(u);
+		}
+		for(Address a : addressService.findAll()){
+			System.out.println(a.getCity());
 		}
 	}
 

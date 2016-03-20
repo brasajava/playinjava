@@ -10,22 +10,22 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
-import com.brasajava.beans.Address;
+import com.brasajava.beans.AddressImpl;
 
 @Service
-public class AddressServiceImpl implements JpaService<Address>{
+public class AddressServiceImpl implements JpaService<AddressImpl>{
 	
 	@Autowired
 	@Qualifier("addressRepository")
-	private JpaRepository<Address, Long> repository;
+	private JpaRepository<AddressImpl, Long> repository;
 
 	@Override
-	public void setRepository(JpaRepository<Address, Long> repository) {
+	public void setRepository(JpaRepository<AddressImpl, Long> repository) {
 		this.repository = repository;
 	}
 
 	@Override
-	public Page<Address> findAll(Pageable pageable) {
+	public Page<AddressImpl> findAll(Pageable pageable) {
 		return repository.findAll(pageable);
 	}
 
@@ -40,12 +40,12 @@ public class AddressServiceImpl implements JpaService<Address>{
 	}
 
 	@Override
-	public void delete(Address address) {
+	public void delete(AddressImpl address) {
 		repository.delete(address);
 	}
 
 	@Override
-	public void delete(Iterable<? extends Address> iterable) {
+	public void delete(Iterable<? extends AddressImpl> iterable) {
 		repository.delete(iterable);
 	}
 
@@ -60,12 +60,12 @@ public class AddressServiceImpl implements JpaService<Address>{
 	}
 
 	@Override
-	public Address findOne(Long id) {
+	public AddressImpl findOne(Long id) {
 		return repository.findOne(id);
 	}
 
 	@Override
-	public <S extends Address> S save(S address) {
+	public <S extends AddressImpl> S save(S address) {
 		return repository.save(address);
 	}
 
@@ -75,22 +75,22 @@ public class AddressServiceImpl implements JpaService<Address>{
 	}
 
 	@Override
-	public void deleteInBatch(Iterable<Address> iterable) {
+	public void deleteInBatch(Iterable<AddressImpl> iterable) {
 		repository.deleteInBatch(iterable);
 	}
 
 	@Override
-	public List<Address> findAll() {
+	public List<AddressImpl> findAll() {
 		return repository.findAll();
 	}
 
 	@Override
-	public List<Address> findAll(Sort sort) {
+	public List<AddressImpl> findAll(Sort sort) {
 		return repository.findAll(sort);
 	}
 
 	@Override
-	public List<Address> findAll(Iterable<Long> iterable) {
+	public List<AddressImpl> findAll(Iterable<Long> iterable) {
 		return repository.findAll(iterable);
 	}
 
@@ -100,17 +100,17 @@ public class AddressServiceImpl implements JpaService<Address>{
 	}
 
 	@Override
-	public Address getOne(Long id) {
+	public AddressImpl getOne(Long id) {
 		return repository.getOne(id);
 	}
 
 	@Override
-	public <S extends Address> List<S> save(Iterable<S> iterable) {
+	public <S extends AddressImpl> List<S> save(Iterable<S> iterable) {
 		return repository.save(iterable);
 	}
 
 	@Override
-	public <S extends Address> S saveAndFlush(S s) {
+	public <S extends AddressImpl> S saveAndFlush(S s) {
 		return repository.save(s);
 	}
 

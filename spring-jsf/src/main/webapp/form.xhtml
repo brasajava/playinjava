@@ -12,7 +12,7 @@
 	  		<p:accordionPanel>
 	  			<p:tab title="User">
 	  			<h:form>
-	  				<p:inputText id="userId" value="#{userManagedBean.userId}"/>
+	  				<p:inputText id="userId" value="#{userManagedBean.id}"/>
 	  				<p:inputText id="name" value="#{userManagedBean.name}" a:placeholder="Name"/>
 	  				<p:inputText id="lastname" value="#{userManagedBean.lastname}" a:placeholder="Lastname"/>
 	  				<p:inputText id="birthday" value="#{userManagedBean.stringBirthday}" a:placeholder="Birthday"/>
@@ -22,13 +22,14 @@
 	  				<p:inputText id="docNumber" value="#{userManagedBean.docNumber}" a:placeholder="Document Number"/>
 	  				<p:inputText id="level" value="#{userManagedBean.level}" a:placeholder="5"/>
 	  				<p:inputText id="balance" value="#{userManagedBean.balance}" a:placeholder="Balance"/>
-	  				<p:commandButton value="Save" actionListener="#{userManagedBean.add()}" update="table"/>
-	  				<p:commandButton value="Update" actionListener="#{userManagedBean.update()}" update="table"/>
-	  				<p:commandButton value="Save and Confirm" actionListener="#{userManagedBean.add}" action="myResponse" update="table"/>
+	  				<p:commandButton value="Save" actionListener="#{userManagedBean.add()}" />
+	  				<p:commandButton value="Update" actionListener="#{userManagedBean.update()}" />
+	  				<p:commandButton value="Save and Confirm" actionListener="#{userManagedBean.add}" action="myResponse" />
 	  				<p:commandButton value="New" actionListerner="#{userManagedBean.clean()}" action="form"/>
 	  				
 	  			</h:form>
 	  			</p:tab>
+	  			<!-- 
 	  			<p:tab title="Address">
 		  			<h:form>
 		  				<p:inputText id="addressId" value="#{userManagedBean.addressId}"/>
@@ -37,59 +38,13 @@
 		  				<p:commandButton value="Save" actionListener="#{userManagedBean.addAddress}" update="tableAddress"/>
 		  			</h:form>
 	  			</p:tab>
+	  			 -->
 	  			<p:tab title="Contact">
 		  			
 	  			</p:tab>
 	  		</p:accordionPanel>
 	  			
-	  			
-	  			<p:dataTable id="table" value="#{userManagedBean.userList}" var="user">
-	  				<p:column headerText="ID">
-	  					<h:outputText value="#{user.id}"/>
-	  				</p:column>
-	  				<p:column headerText="NAME">
-	  					<h:outputText value="#{user.name}"/>
-	  				</p:column>
-	  				<p:column headerText="LASTNAME">
-	  					<h:outputText value="#{user.lastname}"/>
-	  				</p:column>
-	  				<p:column headerText="BIRTHDAY">
-	  					<h:outputText value="#{user.birthday}"/>
-	  				</p:column>
-	  				<p:column headerText="DOCTYPE">
-	  					<h:outputText value="#{user.docType}"/>
-	  				</p:column>
-	  				<p:column headerText="DOCNUMBER">
-	  					<h:outputText value="#{user.docNumber}"/>
-	  				</p:column>	  				
-	  				<p:column headerText="LOGIN NAME">
-	  					<h:outputText value="#{user.loginName}"/>
-	  				</p:column>	  				
-	  				<p:column headerText="PASSWORD">
-	  					<h:outputText value="#{user.password}"/>
-	  				</p:column>
-	  				<p:column headerText="LEVEL">
-	  					<h:outputText value="#{user.level}"/>
-	  				</p:column>
-	  				<p:column headerText="BALANCE">
-	  					<h:outputText value="#{user.balance}"/>
-	  				</p:column>
-	  				<p:column headerText="START DATE">
-	  					<h:outputText value="#{user.startDate}"/>
-	  				</p:column>
-	  				<p:column headerText="ACTIVE">
-	  					<h:outputText value="#{user.active}"/>
-	  				</p:column>
-	  			</p:dataTable>
-	  			
-	  			<p:dataTable id="tableAddress" value="#{userManagedBean.addressList}" var="address">
-		  				<p:column headerText="ID">
-		  					<h:outputText value="#{address.id}"/>
-		  				</p:column>
-		  				<p:column headerText="COUNTRY">
-		  					<h:outputText value="#{address.country}"/>
-		  				</p:column>
-		  			</p:dataTable>
+
 	  			
 	  		</ui:define>
 	  	</ui:composition>

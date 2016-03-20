@@ -3,20 +3,24 @@ package com.brasajava.beans;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class Phone {
+public class Phone implements Contact {
 	private String description;
 	private String phone;
 	
+	@Override
 	public String getDescription() {
 		return description;
 	}
+	@Override
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getPhone() {
+	@Override
+	public String getContact() {
 		return phone;
 	}
-	public void setPhone(String phone) {
+	@Override
+	public void setContact(String phone) {
 		this.phone = phone;
 	}
 	@Override

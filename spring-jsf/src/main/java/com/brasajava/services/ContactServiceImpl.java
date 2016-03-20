@@ -10,22 +10,22 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
-import com.brasajava.beans.Contact;
+import com.brasajava.beans.ContactManagerImpl;
 
 @Service
-public class ContactServiceImpl implements JpaService<Contact>{
+public class ContactServiceImpl implements JpaService<ContactManagerImpl>{
 	
 	@Autowired
 	@Qualifier("contactRepository")
-	private JpaRepository<Contact, Long> repository;
+	private JpaRepository<ContactManagerImpl, Long> repository;
 
 	@Override
-	public void setRepository(JpaRepository<Contact, Long> repository) {
+	public void setRepository(JpaRepository<ContactManagerImpl, Long> repository) {
 		this.repository = repository;
 	}
 
 	@Override
-	public Page<Contact> findAll(Pageable pageable) {
+	public Page<ContactManagerImpl> findAll(Pageable pageable) {
 		return repository.findAll(pageable);
 	}
 
@@ -40,12 +40,12 @@ public class ContactServiceImpl implements JpaService<Contact>{
 	}
 
 	@Override
-	public void delete(Contact contact) {
+	public void delete(ContactManagerImpl contact) {
 		repository.delete(contact);
 	}
 
 	@Override
-	public void delete(Iterable<? extends Contact> iterable) {
+	public void delete(Iterable<? extends ContactManagerImpl> iterable) {
 		repository.delete(iterable);
 	}
 
@@ -60,12 +60,12 @@ public class ContactServiceImpl implements JpaService<Contact>{
 	}
 
 	@Override
-	public Contact findOne(Long id) {
+	public ContactManagerImpl findOne(Long id) {
 		return repository.findOne(id);
 	}
 
 	@Override
-	public <S extends Contact> S save(S contact) {
+	public <S extends ContactManagerImpl> S save(S contact) {
 		return repository.save(contact);
 	}
 
@@ -75,22 +75,22 @@ public class ContactServiceImpl implements JpaService<Contact>{
 	}
 
 	@Override
-	public void deleteInBatch(Iterable<Contact> iterable) {
+	public void deleteInBatch(Iterable<ContactManagerImpl> iterable) {
 		repository.deleteInBatch(iterable);
 	}
 
 	@Override
-	public List<Contact> findAll() {
+	public List<ContactManagerImpl> findAll() {
 		return repository.findAll();
 	}
 
 	@Override
-	public List<Contact> findAll(Sort sort) {
+	public List<ContactManagerImpl> findAll(Sort sort) {
 		return repository.findAll(sort);
 	}
 
 	@Override
-	public List<Contact> findAll(Iterable<Long> iterable) {
+	public List<ContactManagerImpl> findAll(Iterable<Long> iterable) {
 		return repository.findAll(iterable);
 	}
 
@@ -100,17 +100,17 @@ public class ContactServiceImpl implements JpaService<Contact>{
 	}
 
 	@Override
-	public Contact getOne(Long id) {
+	public ContactManagerImpl getOne(Long id) {
 		return repository.getOne(id);
 	}
 
 	@Override
-	public <S extends Contact> List<S> save(Iterable<S> iterable) {
+	public <S extends ContactManagerImpl> List<S> save(Iterable<S> iterable) {
 		return repository.save(iterable);
 	}
 
 	@Override
-	public <S extends Contact> S saveAndFlush(S s) {
+	public <S extends ContactManagerImpl> S saveAndFlush(S s) {
 		return repository.save(s);
 	}
 

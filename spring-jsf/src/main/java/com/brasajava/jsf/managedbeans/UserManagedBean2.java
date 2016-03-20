@@ -11,8 +11,8 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 
-import com.brasajava.beans.Address;
-import com.brasajava.beans.Contact;
+import com.brasajava.beans.AddressImpl;
+import com.brasajava.beans.ContactManagerImpl;
 import com.brasajava.beans.User;
 import com.brasajava.services.JpaService;
 
@@ -28,14 +28,14 @@ public class UserManagedBean2 implements Serializable{
 	@ManagedProperty(value="#{userServiceImpl}")
 	private JpaService<User> userService;
 	@ManagedProperty(value="#{addressServiceImpl}")
-	private JpaService<Address> addressService;
+	private JpaService<AddressImpl> addressService;
 	@ManagedProperty(value="#{contactServiceImpl}")
-	private JpaService<Contact> contactService;
+	private JpaService<ContactManagerImpl> contactService;
 	private List<User> userList;
-	private List<Address> addressList;
+	private List<AddressImpl> addressList;
 	private User user;
-	private Address address;
-	private Contact contact;
+	private AddressImpl address;
+	private ContactManagerImpl contactManager;
 	
 	@PostConstruct
 	public void init() {
@@ -52,10 +52,10 @@ public class UserManagedBean2 implements Serializable{
 	public void setUserService(JpaService<User> userService) {
 		this.userService = userService;
 	}
-	public void setAddressService(JpaService<Address> addressService) {
+	public void setAddressService(JpaService<AddressImpl> addressService) {
 		this.addressService = addressService;
 	}
-	public void setContactService(JpaService<Contact> contactService) {
+	public void setContactService(JpaService<ContactManagerImpl> contactService) {
 		this.contactService = contactService;
 	}
 	/*End Services Setter Methods*/
@@ -68,17 +68,17 @@ public class UserManagedBean2 implements Serializable{
 	public void setUser(User user){
 		this.user = user;
 	}
-	public Address getAddress() {
+	public AddressImpl getAddress() {
 		return address;
 	}
-	public void setAddress(Address address) {
+	public void setAddress(AddressImpl address) {
 		this.address = address;
 	}
-	public Contact getContact() {
-		return contact;
+	public ContactManagerImpl getContact() {
+		return contactManager;
 	}
-	public void setContact(Contact contact) {
-		this.contact = contact;
+	public void setContact(ContactManagerImpl contact) {
+		this.contactManager = contact;
 	}
 	/*End Object Getters and Setters*/
 	
@@ -116,10 +116,10 @@ public class UserManagedBean2 implements Serializable{
 	public void setUserList(List<User> userList) {
 		this.userList = userList;
 	}
-	public List<Address> getAddressList(){
+	public List<AddressImpl> getAddressList(){
 		return addressList;
 	}
-	public void setAddressList(List<Address> addressList){
+	public void setAddressList(List<AddressImpl> addressList){
 		this.addressList = addressList;
 	}
 	/*End List Setter methods*/
@@ -284,11 +284,11 @@ public class UserManagedBean2 implements Serializable{
 	private void newObject(){
 		user = null;
 		address = null;
-		contact = null;
+		contactManager = null;
 		user = new User();
-		address = new Address();
-		contact = new Contact();
+		address = new AddressImpl();
+		contactManager = new ContactManagerImpl();
 		user.setAddress(address);
-		user.setContact(contact);
+		user.setContactManager(contactManager);
 	}
 }

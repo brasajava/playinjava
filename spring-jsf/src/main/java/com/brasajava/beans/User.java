@@ -31,16 +31,20 @@ public class User implements Person, Serializable{
 	private String password;
 	private BigDecimal balance;
 	private int level;
-	@OneToOne(cascade=CascadeType.ALL)
-	private Address address;
-	@OneToOne(cascade=CascadeType.ALL)
-	private Contact contact;
 	
-	public void setContact(Contact contact){
-		this.contact = contact;
+	
+	@OneToOne(cascade=CascadeType.ALL, targetEntity = AddressImpl.class)
+	private Address address;
+	@OneToOne(cascade=CascadeType.ALL, targetEntity = ContactManagerImpl.class)
+	private ContactManager contactManager;
+	
+	
+	
+	public void setContactManager(ContactManager contactManager){
+		this.contactManager = contactManager;
 	}
-	public Contact getContact(){
-		return contact;
+	public ContactManager getContactManager(){
+		return contactManager;
 	}
 	public void setAddress(Address address){
 		this.address = address;
@@ -49,6 +53,8 @@ public class User implements Person, Serializable{
 		return address;
 	}
 	
+	
+	//Person Getters and Setters
 	@Override
 	public LocalDate getBirthday() {
 		return birthday;
