@@ -11,6 +11,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -44,6 +46,7 @@ public class User implements Person, Loggable{
 	private List<Email> emails;
 	private BigDecimal credit;
 	@ManyToMany(fetch=FetchType.EAGER, cascade= CascadeType.ALL)
+	@JoinTable(name="permissions",joinColumns={@JoinColumn(name="userId")},inverseJoinColumns={@JoinColumn(name="permissionId")})
 	private List<Permission> permissions;
 	
 	public void setId(long id){
@@ -146,4 +149,12 @@ public class User implements Person, Loggable{
 	public void setPermissions(List<Permission> permissions) {
 		this.permissions = permissions;
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", firstLastName=" + firstLastName + ", secondLastName="
+				+ secondLastName + ", birthday=" + birthday + ", email=" + email + ", password=" + password
+				+ ", active=" + active + ", address=" + address + ", phones=" + phones + ", emails=" + emails
+				+ ", credit=" + credit + ", permissions=" + permissions + "]";
+	}
+	
 }

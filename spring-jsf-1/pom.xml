@@ -126,7 +126,11 @@
 			<version>2.11.0</version>
 		</dependency>
 		<!-- PARTICULAR JARS -->
-		
+
+		<dependency>
+			<groupId>org.spockframework</groupId>
+			<artifactId>spock-spring</artifactId>
+		</dependency>
 	</dependencies>
 		
 	<build>

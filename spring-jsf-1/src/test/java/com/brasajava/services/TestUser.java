@@ -1,33 +1,50 @@
-package com.brasajava.test;
+package com.brasajava.services;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.transaction.annotation.Transactional;
 
-import com.brasajava.SpringJsf1Application;
+import com.brasajava.SpringTest;
 import com.brasajava.beans.AddressImpl;
 import com.brasajava.beans.Email;
 import com.brasajava.beans.Permission;
 import com.brasajava.beans.Phone;
+import com.brasajava.beans.User;
 import com.brasajava.beans.interfaces.Address;
 import com.brasajava.repositories.UserRepository;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = SpringJsf1Application.class)
-@WebAppConfiguration
-public class TestUser {
-	
+@Transactional
+public class TestUser extends SpringTest{
 	@Autowired
 	private UserRepository userRepository;
 	
 	@Test
 	public void contextLoads() {
+		User user = new User();
+		user.setName("Ricardo Maximino");
+		user.setFirstLastName("Gonçalves");
+		user.setSecondLastName("De Moraes");
+		user.setActive(false);
+		user.setAddress(this.generateAddress());
+		user.setBirthday(LocalDate.of(1982, 11, 15));
+		user.setCredit(new BigDecimal(1200));
+		user.setEmail("ricardomaximino@hotmail.com");
+		user.setPassword("Ricardo2");
+		user.setEmails(this.emailList());
+		user.setPhones(this.phoneList());
+		user.setPermissions(this.permissionList());
+		
+		log.info("@Before save " + user.toString());
+		User user2 = userRepository.save(user);
+		
+		log.info("@After save " + user2.toString());
+		Assert.assertNotEquals("The user has a not valid id.", 0, user2.getId());
 	}
 
 	private List<Phone> phoneList(){
@@ -41,7 +58,7 @@ public class TestUser {
 			phone.setMain(false);
 			list.add(phone);
 		}
-		int random = (int) Math.round(Math.random()*contacts.length);
+		int random = (int) Math.round(Math.random()*contacts.length - 1);
 		list.get(random).setMain(true);
 		return list;
 	}
@@ -56,13 +73,21 @@ public class TestUser {
 			email.setMain(false);
 			list.add(email);
 		}
-		int random = (int) Math.round(Math.random()*contacts.length);
+		int random = (int) Math.round(Math.random()*contacts.length - 1);
 		list.get(random).setMain(true);
 		return list;
 	}
 	private List<Permission> permissionList(){
-		List
-		return null;
+		Permission permission = new Permission();
+		List<Permission> list = new ArrayList<Permission>();
+		permission.setName("Saver");
+		permission.setPermission("save");
+		list.add(permission);
+		permission = new Permission();
+		permission.setName("Updater");
+		permission.setPermission("update");
+		list.add(permission);
+		return list;
 	}
 	private Address generateAddress(){
 		Address address = new AddressImpl();

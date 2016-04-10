@@ -9,6 +9,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
 @Entity
@@ -22,6 +24,7 @@ public class Product {
 	private BigDecimal price;
 	private BigDecimal commission;
 	@ManyToMany(fetch=FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinTable(name="prudoctGroups",joinColumns={@JoinColumn(name="productId")},inverseJoinColumns={@JoinColumn(name="groupId")})
 	private List<Group> groups;
 	
 	public long getId() {
