@@ -17,7 +17,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 import com.brasajava.beans.interfaces.Address;
 import com.brasajava.beans.interfaces.Loggable;
@@ -32,7 +31,6 @@ public class User implements Person, Loggable{
 	private String name;
 	private String firstLastName;
 	private String secondLastName;
-	@Transient
 	private LocalDate birthday;
 	@Column(unique=true)
 	private String email;
