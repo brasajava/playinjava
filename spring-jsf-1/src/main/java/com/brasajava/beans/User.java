@@ -32,8 +32,9 @@ public class User implements Person, Loggable{
 	private String firstLastName;
 	private String secondLastName;
 	private LocalDate birthday;
-	@Column(unique=true)
+	@Column(unique=true, nullable=false)
 	private String email;
+	@Column(nullable=false)
 	private String password;
 	private boolean active;
 	@OneToOne(targetEntity=AddressImpl.class, cascade = CascadeType.ALL, fetch=FetchType.EAGER)

@@ -8,8 +8,8 @@
 
 <body>
 	<h:body>
-		<ui:composition template="/template/common/commonLayout.xhtml">
-			<ui:define name="header">
+		<ui:composition template="/template/app/appLayout.xhtml">
+			<ui:define name="body">
 				<div> Aqui</div>
 					<h1>This is the customized Header</h1>
 					<h:form id="customerForm">
@@ -24,9 +24,6 @@
 						<p:inputText value="#{masterManagedBean.search}" a:placeholder="SEARCH"/>
 						<p:commandButton value="send" actionListener="#{masterManagedBean.find}" update="customerTable"/>
 					</h:form>
-			</ui:define>
-			<ui:define name="body">
-				<h1>This is the customized Body</h1>
 				
 				<p:dataTable id="customerTable" var="customer" value="#{masterManagedBean.customers}"
 					rows="10" paginator="true"
@@ -46,8 +43,6 @@
 						<h:outputText value="#{customer.lastName}"></h:outputText>
 					</p:column>
 				</p:dataTable>
-			</ui:define>
-			<ui:define name="footer">
 				<h1 id="test">Fake From</h1>
 				<h:form id="fakeForm">
 						<p:inputText id="fakeCustomerId" value="#{masterManagedBean.selectedCustomer.id}" a:placeholder="CUSTOMER_ID"/>

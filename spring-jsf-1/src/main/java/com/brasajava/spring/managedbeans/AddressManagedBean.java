@@ -18,7 +18,6 @@ public class AddressManagedBean extends AddressImpl{
 	@PostConstruct
 	public void init() {
 		log.info("INIT ADDRESS");
-		this.setCountry("España");
 	}
 	@PreDestroy
 	public void destroy(){
