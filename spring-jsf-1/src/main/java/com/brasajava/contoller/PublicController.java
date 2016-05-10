@@ -3,6 +3,7 @@ package com.brasajava.contoller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -21,7 +22,7 @@ public class PublicController {
 	
 	@RequestMapping("/spring/*")
 	@ResponseBody
-	public String creator() {
+	public String creator(MessageSource messageSource) {
 		try{
 			CustomerImpl cust = new CustomerImpl();
 			cust.setFirstName("test");
@@ -56,6 +57,7 @@ public class PublicController {
 				log.info(test.getAddress().toString());
 			}
 			log.info("");
+			
 			}catch(Exception ex){
 				log.error(ex.getMessage());
 			}

@@ -9,6 +9,7 @@ import org.primefaces.event.SelectEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -18,10 +19,15 @@ import com.brasajava.beans.interfaces.Address;
 import com.brasajava.repositories.UserRepository;
 
 @Component
-@Scope("request")
+@Scope("session")
 public class UserViewManaged {
 	private static final Logger log = LoggerFactory.getLogger(UserViewManaged.class);
 
+	@Autowired
+	MessageSource messageSource;
+	@Autowired
+	SessionManagedBean localeManagedBean;
+	
 	@Autowired
 	private UserRepository userRepository;
 	@Autowired
@@ -39,6 +45,7 @@ public class UserViewManaged {
 		System.out.println("User name = " + user.getName());
 		System.out.println("Country = " + address.getCountry());
 		System.out.println("Repository = " + userRepository);
+		System.out.println("MessageSource HI " +  messageSource.getMessage("hi", null, localeManagedBean.getLocale()));
 	}
 
 	@PreDestroy

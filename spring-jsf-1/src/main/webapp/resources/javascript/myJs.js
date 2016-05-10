@@ -9,3 +9,6 @@ function copy(){
 	alert("");
 	
 }
+function reload(){
+	window.location.reload();
+}

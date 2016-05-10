@@ -10,7 +10,7 @@
 	<h:body>
 		<ui:composition template="/template/app/appLayout.xhtml">
 			<ui:define name="body">
-				<h1>This is the customized Header</h1>
+				<h1><h:outputLabel value="#{message.customizedHeader}"/> </h1>
 
 				<h:panelGrid id="grid" columns="2" cellpadding="10">
 
